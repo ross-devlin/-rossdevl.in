@@ -1,0 +1,22 @@
+.desktop {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--desktop-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: var(--z-desktop);
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .desktop {
+    overflow-y: auto;
+    padding: var(--space-sm);
+    padding-bottom: calc(var(--taskbar-height) + var(--space-sm));
+    display: flex;
+    flex-direction: column;
+  }
+}

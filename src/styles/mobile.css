@@ -1,0 +1,67 @@
+/* Mobile responsive styles */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  :root {
+    --titlebar-height: 32px;
+    --taskbar-height: 48px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  /* Stack windows as full-width cards */
+  .mobile-window {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 300px;
+    margin-bottom: var(--space-sm);
+    box-shadow: none;
+  }
+
+  .mobile-window:last-child {
+    margin-bottom: var(--taskbar-height);
+  }
+
+  /* Disable window chrome 3D effect on mobile */
+  .mobile-window::before {
+    display: none;
+  }
+
+  /* Make desktop scrollable */
+  .mobile-desktop {
+    overflow-y: auto;
+    padding: var(--space-sm);
+  }
+
+  /* Larger touch targets for window controls */
+  .mobile-controls button {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  /* Larger taskbar buttons */
+  .mobile-taskbar button {
+    min-width: 60px;
+    height: 36px;
+    padding: 0 var(--space-sm);
+  }
+}
+
+/* Utility class for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch target sizes */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Add tap highlight */
+  button:active {
+    opacity: 0.7;
+  }
+}

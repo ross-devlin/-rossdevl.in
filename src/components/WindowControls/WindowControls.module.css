@@ -1,0 +1,57 @@
+.controls {
+  display: flex;
+  gap: var(--space-xs);
+  margin-left: auto;
+}
+
+.button {
+  width: 16px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--control-bg);
+  border: 1px solid;
+  border-color: var(--chrome-border-light) var(--chrome-border-dark) var(--chrome-border-dark) var(--chrome-border-light);
+  font-size: 10px;
+  line-height: 1;
+  padding: 0;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--control-hover);
+}
+
+.button:active:not(:disabled) {
+  background: var(--control-active);
+  border-color: var(--chrome-border-dark) var(--chrome-border-light) var(--chrome-border-light) var(--chrome-border-dark);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:focus-visible {
+  outline: 1px dotted var(--content-text);
+  outline-offset: -3px;
+}
+
+.icon {
+  display: block;
+  font-weight: bold;
+  color: var(--content-text);
+}
+
+.minimize .icon {
+  margin-top: 4px;
+}
+
+.maximize .icon {
+  font-size: 8px;
+}
+
+.close .icon {
+  font-size: 12px;
+  margin-top: -1px;
+}

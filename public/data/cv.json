@@ -1,0 +1,45 @@
+{
+  "name": "Ross Devlin",
+  "title": "Software Engineer",
+  "contact": {
+    "email": "ross@rossdevl.in",
+    "github": "https://github.com/rossdevlin",
+    "linkedin": "https://linkedin.com/in/rossdevlin"
+  },
+  "summary": "Full-stack software engineer with experience building scalable web applications and developer tools.",
+  "experience": [
+    {
+      "company": "Company Name",
+      "title": "Senior Software Engineer",
+      "period": "2022 - Present",
+      "highlights": [
+        "Led development of key features",
+        "Mentored junior engineers",
+        "Improved system performance"
+      ]
+    },
+    {
+      "company": "Previous Company",
+      "title": "Software Engineer",
+      "period": "2019 - 2022",
+      "highlights": [
+        "Built full-stack web applications",
+        "Implemented CI/CD pipelines",
+        "Collaborated with product teams"
+      ]
+    }
+  ],
+  "skills": {
+    "languages": ["JavaScript", "TypeScript", "Python", "Go"],
+    "frontend": ["React", "Vue", "CSS", "HTML"],
+    "backend": ["Node.js", "PostgreSQL", "Redis", "AWS"],
+    "tools": ["Git", "Docker", "Kubernetes", "Terraform"]
+  },
+  "education": [
+    {
+      "institution": "University Name",
+      "degree": "B.S. Computer Science",
+      "year": "2019"
+    }
+  ]
+}

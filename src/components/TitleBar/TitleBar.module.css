@@ -1,0 +1,38 @@
+.titleBar {
+  height: var(--titlebar-height);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-sm);
+  gap: var(--space-sm);
+  user-select: none;
+  cursor: default;
+}
+
+.focused {
+  background: linear-gradient(
+    90deg,
+    var(--titlebar-active) 0%,
+    #1084d0 50%,
+    var(--titlebar-active) 100%
+  );
+}
+
+.unfocused {
+  background: var(--titlebar-inactive);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.title {
+  flex: 1;
+  color: var(--titlebar-text);
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
