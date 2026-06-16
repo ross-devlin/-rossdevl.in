@@ -51,6 +51,58 @@
   color: #0000cc;
 }
 
+.bio {
+  margin: 0 0 var(--space-sm);
+}
+
+.bioLabel {
+  margin: 0 0 var(--space-xs);
+  font-weight: bold;
+}
+
+.bioList {
+  margin: 0 0 var(--space-md) var(--space-lg);
+  padding: 0;
+  list-style-type: disc;
+}
+
+.bioList li {
+  margin-bottom: var(--space-xs);
+}
+
+.cvCollapsible {
+  margin-top: var(--space-md);
+}
+
+.cvSummary {
+  font-size: var(--font-size-base);
+  font-weight: bold;
+  cursor: pointer;
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--chrome-border-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  user-select: none;
+}
+
+.cvSummary::-webkit-details-marker {
+  display: none;
+}
+
+.cvSummary::before {
+  content: '▶';
+  font-size: 0.6em;
+  transition: transform 0.15s;
+}
+
+details[open] .cvSummary::before {
+  transform: rotate(90deg);
+}
+
 .summary {
   font-style: italic;
   color: #444;

@@ -10,7 +10,7 @@ import { RadioPlaysWindow } from './windows/RadioPlaysWindow';
 const initialWindows = [
   {
     id: 'cv',
-    title: 'CV - Ross Devlin',
+    title: 'About',
     position: { x: 80, y: 60 },
     size: { width: 500, height: 500 },
     component: CVWindow,
