@@ -41,6 +41,32 @@
   border-color: var(--chrome-border-dark) var(--chrome-border-light) var(--chrome-border-light) var(--chrome-border-dark);
 }
 
+/* Resize handle - bottom-right corner grip */
+.resizeHandle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  cursor: nwse-resize;
+  z-index: 1;
+  /* Classic diagonal grip lines */
+  background:
+    linear-gradient(
+      135deg,
+      transparent 0%, transparent 30%,
+      var(--chrome-border-light) 30%, var(--chrome-border-light) 35%,
+      var(--chrome-border-dark) 35%, var(--chrome-border-dark) 40%,
+      transparent 40%, transparent 55%,
+      var(--chrome-border-light) 55%, var(--chrome-border-light) 60%,
+      var(--chrome-border-dark) 60%, var(--chrome-border-dark) 65%,
+      transparent 65%, transparent 80%,
+      var(--chrome-border-light) 80%, var(--chrome-border-light) 85%,
+      var(--chrome-border-dark) 85%, var(--chrome-border-dark) 90%,
+      transparent 90%
+    );
+}
+
 /* Mobile styles */
 @media (max-width: 480px) {
   .window {

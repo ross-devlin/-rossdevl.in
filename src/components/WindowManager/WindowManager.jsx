@@ -13,6 +13,7 @@ export function WindowManager({ backgroundUrl, children }) {
     closeWindow,
     toggleMinimize,
     updateWindowPosition,
+    updateWindowSize,
   } = useWindowManager();
 
   const windowArray = Array.from(windows.values());
@@ -49,8 +50,10 @@ export function WindowManager({ backgroundUrl, children }) {
               style={{ zIndex: win.zIndex }}
               onFocus={() => focusWindow(win.id)}
               onMinimize={() => minimizeWindow(win.id)}
-              onClose={() => closeWindow(win.id)}
+              onClose={() => minimizeWindow(win.id)}
               onPositionChange={(pos) => updateWindowPosition(win.id, pos)}
+              onSizeChange={(s) => updateWindowSize(win.id, s)}
+              resizable
             >
               {WindowContent ? (
                 <WindowContent {...(win.props || {})} />

@@ -1,0 +1,240 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: var(--font-system);
+}
+
+.header {
+  padding: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--chrome-border-dark);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+}
+
+.subtitle {
+  margin: var(--space-xs) 0 0;
+  color: #666;
+  font-size: var(--font-size-sm);
+}
+
+.player {
+  padding: var(--space-md) var(--space-lg);
+  background: var(--chrome-bg);
+  border-bottom: 2px solid var(--chrome-border-dark);
+  border-top: 1px solid var(--chrome-border-light);
+}
+
+.playerInner {
+  padding: var(--space-md);
+  background: var(--content-bg);
+  border: 2px solid;
+  border-color: var(--chrome-border-dark) var(--chrome-border-light) var(--chrome-border-light) var(--chrome-border-dark);
+}
+
+.nowPlaying {
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-sm);
+  color: #444;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nowPlayingLabel {
+  font-weight: bold;
+  color: var(--content-text);
+}
+
+.audio {
+  width: 100%;
+  height: 28px;
+  display: block;
+}
+
+.playerEmpty {
+  font-size: var(--font-size-sm);
+  color: #888;
+  text-align: center;
+  padding: var(--space-sm) 0;
+}
+
+.episodeList {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-sm) 0;
+}
+
+.episodeRow {
+  border-bottom: 1px solid #eee;
+}
+
+.episode {
+  display: flex;
+  align-items: center;
+  padding: var(--space-sm) var(--space-lg);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  user-select: none;
+}
+
+.episode:hover {
+  background: #e8e8e8;
+}
+
+.episodeActive {
+  background: var(--titlebar-active);
+  color: var(--titlebar-text);
+}
+
+.episodeActive:hover {
+  background: var(--titlebar-active);
+  color: var(--titlebar-text);
+}
+
+.episodeNumber {
+  width: 32px;
+  flex-shrink: 0;
+  color: #888;
+  font-size: var(--font-size-sm);
+  text-align: right;
+  margin-right: var(--space-md);
+}
+
+.episodeActive .episodeNumber {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.episodeDate {
+  flex: 1;
+}
+
+.episodeLabel {
+  margin-left: var(--space-md);
+  font-style: italic;
+  color: #888;
+  font-size: var(--font-size-sm);
+}
+
+.episodeActive .episodeLabel {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.playingIcon {
+  margin-right: var(--space-sm);
+  flex-shrink: 0;
+}
+
+/* Track toggle button */
+.trackToggle {
+  flex-shrink: 0;
+  margin-left: var(--space-sm);
+  padding: 1px 6px;
+  font-size: 11px;
+  font-family: var(--font-system);
+  background: var(--chrome-bg);
+  border: 1px solid var(--chrome-border-dark);
+  cursor: pointer;
+  color: #666;
+  white-space: nowrap;
+}
+
+.trackToggle:hover {
+  background: #ddd;
+}
+
+.trackToggleActive {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.trackToggleActive:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Tracklist panel */
+.tracklist {
+  background: #f8f6f2;
+  border-top: 1px solid #ddd;
+  padding: var(--space-sm) var(--space-lg);
+  padding-left: calc(var(--space-lg) + 32px + var(--space-md));
+}
+
+.trackTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.trackTable thead th {
+  text-align: left;
+  font-weight: bold;
+  color: #888;
+  padding: 2px 8px 4px 0;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.trackRow td {
+  padding: 3px 8px 3px 0;
+  vertical-align: top;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.trackRow:last-child td {
+  border-bottom: none;
+}
+
+.trackNum {
+  width: 24px;
+  color: #aaa;
+  text-align: right;
+  padding-right: 8px;
+  flex-shrink: 0;
+}
+
+.trackArtist {
+  font-weight: 600;
+  white-space: nowrap;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trackSong {
+  font-style: italic;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trackRelease {
+  color: #888;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: var(--space-lg);
+  font-family: var(--font-system);
+  font-size: var(--font-size-sm);
+}
+
+.error {
+  color: #c00;
+}

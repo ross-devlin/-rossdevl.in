@@ -134,3 +134,19 @@
 .year {
   color: #666;
 }
+
+.project {
+  margin-bottom: var(--space-sm);
+}
+
+.projectHeader {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.projectDescription {
+  margin: var(--space-xs) 0 0;
+  font-size: var(--font-size-sm);
+  color: #444;
+}

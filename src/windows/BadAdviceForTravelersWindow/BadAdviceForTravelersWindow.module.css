@@ -1,0 +1,27 @@
+.content {
+  padding: var(--space-lg);
+  font-family: var(--font-system);
+  line-height: 1.5;
+}
+
+.header {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--chrome-border-dark);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+}
+
+.section {
+  margin-bottom: var(--space-lg);
+}
+
+.text {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: #444;
+}

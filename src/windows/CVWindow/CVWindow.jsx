@@ -24,6 +24,24 @@ export function CVWindow({ dataUrl = '/data/cv.json' }) {
     return null;
   }
 
+  const renderJobList = (jobs) =>
+    jobs.map((job, index) => (
+      <div key={index} className={styles.job}>
+        <div className={styles.jobHeader}>
+          <strong>{job.title}</strong>
+          <span className={styles.period}>{job.period}</span>
+        </div>
+        <div className={styles.company}>{job.company}</div>
+        {job.highlights && (
+          <ul className={styles.highlights}>
+            {job.highlights.map((highlight, i) => (
+              <li key={i}>{highlight}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    ));
+
   return (
     <div className={styles.cv}>
       <header className={styles.header}>
@@ -33,6 +51,11 @@ export function CVWindow({ dataUrl = '/data/cv.json' }) {
           <div className={styles.contact}>
             {data.contact.email && (
               <a href={`mailto:${data.contact.email}`}>{data.contact.email}</a>
+            )}
+            {data.contact.website && (
+              <a href={data.contact.website} target="_blank" rel="noopener noreferrer">
+                Website
+              </a>
             )}
             {data.contact.github && (
               <a href={data.contact.github} target="_blank" rel="noopener noreferrer">
@@ -54,23 +77,43 @@ export function CVWindow({ dataUrl = '/data/cv.json' }) {
         </section>
       )}
 
+      {data.education && data.education.length > 0 && (
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Education</h2>
+          {data.education.map((edu, index) => (
+            <div key={index} className={styles.education}>
+              <strong>{edu.institution}</strong>
+              <span> — {edu.degree}</span>
+              <span className={styles.year}> ({edu.year})</span>
+            </div>
+          ))}
+        </section>
+      )}
+
       {data.experience && data.experience.length > 0 && (
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Experience</h2>
-          {data.experience.map((job, index) => (
-            <div key={index} className={styles.job}>
-              <div className={styles.jobHeader}>
-                <strong>{job.title}</strong>
-                <span className={styles.period}>{job.period}</span>
+          <h2 className={styles.sectionTitle}>Work Experience</h2>
+          {renderJobList(data.experience)}
+        </section>
+      )}
+
+      {data.freelance && data.freelance.length > 0 && (
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Freelance</h2>
+          {renderJobList(data.freelance)}
+        </section>
+      )}
+
+      {data.projects && data.projects.length > 0 && (
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Projects + Awards</h2>
+          {data.projects.map((project, index) => (
+            <div key={index} className={styles.project}>
+              <div className={styles.projectHeader}>
+                <strong>{project.name}</strong>
+                <span className={styles.year}>({project.year})</span>
               </div>
-              <div className={styles.company}>{job.company}</div>
-              {job.highlights && (
-                <ul className={styles.highlights}>
-                  {job.highlights.map((highlight, i) => (
-                    <li key={i}>{highlight}</li>
-                  ))}
-                </ul>
-              )}
+              <p className={styles.projectDescription}>{project.description}</p>
             </div>
           ))}
         </section>
@@ -89,19 +132,6 @@ export function CVWindow({ dataUrl = '/data/cv.json' }) {
               </div>
             ))}
           </div>
-        </section>
-      )}
-
-      {data.education && data.education.length > 0 && (
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Education</h2>
-          {data.education.map((edu, index) => (
-            <div key={index} className={styles.education}>
-              <strong>{edu.degree}</strong>
-              <span> - {edu.institution}</span>
-              <span className={styles.year}> ({edu.year})</span>
-            </div>
-          ))}
         </section>
       )}
     </div>

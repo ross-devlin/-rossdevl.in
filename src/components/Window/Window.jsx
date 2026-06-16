@@ -1,6 +1,10 @@
+import { useState, useCallback } from 'react';
 import { TitleBar } from '../TitleBar';
 import { useDraggable } from '../../hooks/useDraggable';
 import styles from './Window.module.css';
+
+const MIN_WIDTH = 200;
+const MIN_HEIGHT = 100;
 
 export function Window({
   id,
@@ -16,7 +20,9 @@ export function Window({
   onMaximize,
   onClose,
   onPositionChange,
+  onSizeChange,
   draggable = true,
+  resizable = false,
   style,
 }) {
   const { position, isDragging, handlers } = useDraggable({
@@ -27,13 +33,41 @@ export function Window({
     disabled: !draggable,
   });
 
+  const [isResizing, setIsResizing] = useState(false);
+
+  const handleResizeStart = useCallback((e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsResizing(true);
+
+    const startX = e.clientX;
+    const startY = e.clientY;
+    const startWidth = size.width;
+    const startHeight = size.height;
+
+    const handleMouseMove = (moveEvent) => {
+      const newWidth = Math.max(MIN_WIDTH, startWidth + (moveEvent.clientX - startX));
+      const newHeight = Math.max(MIN_HEIGHT, startHeight + (moveEvent.clientY - startY));
+      onSizeChange?.({ width: newWidth, height: newHeight });
+    };
+
+    const handleMouseUp = () => {
+      setIsResizing(false);
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+  }, [size, onSizeChange]);
+
   if (minimized) {
     return null;
   }
 
   return (
     <div
-      className={`${styles.window} ${focused ? styles.focused : ''} ${isDragging ? styles.dragging : ''}`}
+      className={`${styles.window} ${focused ? styles.focused : ''} ${isDragging || isResizing ? styles.dragging : ''}`}
       style={{
         left: position.x,
         top: position.y,
@@ -55,6 +89,12 @@ export function Window({
         onMouseDown={handlers.onMouseDown}
       />
       <div className={styles.content}>{children}</div>
+      {resizable && (
+        <div
+          className={styles.resizeHandle}
+          onMouseDown={handleResizeStart}
+        />
+      )}
     </div>
   );
 }

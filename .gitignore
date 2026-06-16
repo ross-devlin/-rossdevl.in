@@ -25,3 +25,20 @@ dist-ssr
 
 *storybook.log
 storybook-static
+
+# Python env
+.venv/
+
+# macOS iCloud placeholders
+*.icloud
+
+# Source design assets (not needed for build)
+orbitron-master/
+design/
+bad advice/
+dither*.png
+
+# Personal documents
+Ross Devlin comms CV 2026 (1).pdf
+TANIA_financial_model_v2.xlsx
+Spins-search-results*.csv

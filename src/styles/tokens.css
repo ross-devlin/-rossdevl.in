@@ -1,4 +1,29 @@
 /* src/styles/tokens.css */
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Chrome colors (classic OS aesthetic) */
   --chrome-bg: #c0c0c0;

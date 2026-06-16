@@ -1,45 +1,86 @@
 {
   "name": "Ross Devlin",
-  "title": "Software Engineer",
+  "title": "Communications Professional",
   "contact": {
-    "email": "ross@rossdevl.in",
-    "github": "https://github.com/rossdevlin",
+    "email": "ross.devlin1@gmail.com",
+    "website": "https://rossdevl.in",
     "linkedin": "https://linkedin.com/in/rossdevlin"
   },
-  "summary": "Full-stack software engineer with experience building scalable web applications and developer tools.",
+  "summary": "Communications professional with a focus on finance and economic storytelling. My mission is to produce outstanding narratives through innovative omniplatform strategy, strong brand storytelling, and creative flexibility. My work reflects the values and aspirations of my clients and audience. Always in search of adventure and collaboration, my career has taken me to five continents, working across video, audio, social, and live, and includes corporate, agency, and freelance roles in both local and international markets.",
+  "education": [
+    {
+      "institution": "University of Edinburgh, UK",
+      "degree": "MA (Honours), Economics",
+      "year": "2013-2017"
+    }
+  ],
   "experience": [
     {
-      "company": "Company Name",
-      "title": "Senior Software Engineer",
-      "period": "2022 - Present",
+      "company": "International Paper (Memphis)",
+      "title": "Communications Coordinator",
+      "period": "2022-2025",
       "highlights": [
-        "Led development of key features",
-        "Mentored junior engineers",
-        "Improved system performance"
+        "Developed and deployed strategy to leverage and increase 400k+ followers + voice, look and feel of the \"new\" IP; increased followers by 3x and made us engagement leader on social media vs industry competitors for three years.",
+        "Global Administrator for IP Digital Asset Management platform; communications lead for the working team on Acquia platform deployment; ingested over 100,000 assets from physical and digital internal sources. User base from zero to 50,000 monthly downloads.",
+        "Pitched, wrote, and edited content for internal weekly newsletter with 30,000 circulation. Produced original stories for website with highest readership metrics, over 10,000 site visits.",
+        "Projects include product campaigns leveraging industry award wins, sustainability, and community engagement efforts; IP brand refresh 2023; 125th anniversary digital comms; annual Sustainability report storytelling.",
+        "Implemented innovative initiatives by introducing executive communications and thought leadership on LinkedIn.",
+        "Led establishment of new guidelines allowing for greater engagement with employee/public social media users."
       ]
     },
     {
-      "company": "Previous Company",
-      "title": "Software Engineer",
-      "period": "2019 - 2022",
+      "company": "International Paper (Memphis)",
+      "title": "Credit Analyst",
+      "period": "2017-2022",
       "highlights": [
-        "Built full-stack web applications",
-        "Implemented CI/CD pipelines",
-        "Collaborated with product teams"
+        "$200 million in monthly accounts receivable and customer risk. Managed credit relationships with small to medium size customers ($100k-$5M), conducted biannual risk reviews with VP leaders, built on-demand reports and models in Excel for internal and external presentation.",
+        "Maintained models of region financial performance and forecasting. Performed 10-K and private tax return analysis, risk modeling and cash flow projection, credit rating analysis for over 2,000 customers in the Southeastern United States.",
+        "Significant risk savings of over $100MM annual on junk bond customer exposure drawdowns."
       ]
     }
   ],
-  "skills": {
-    "languages": ["JavaScript", "TypeScript", "Python", "Go"],
-    "frontend": ["React", "Vue", "CSS", "HTML"],
-    "backend": ["Node.js", "PostgreSQL", "Redis", "AWS"],
-    "tools": ["Git", "Docker", "Kubernetes", "Terraform"]
-  },
-  "education": [
+  "freelance": [
     {
-      "institution": "University Name",
-      "degree": "B.S. Computer Science",
-      "year": "2019"
+      "company": "Devlin's Inc",
+      "title": "Audio Tech + Project Manager",
+      "period": "2025-Now",
+      "highlights": [
+        "Audio technician and Project Manager for corporate marketing events, live exhibitions, and music in New York City. Clients include Nike, Hauser & Wirth, Lululemon, Nespresso, The Outset, A24.",
+        "Generate new client leads and serve as project manager for new business (Invisible North)."
+      ]
+    },
+    {
+      "company": "Larry Heard (USA)",
+      "title": "Editor / Production Coordinator",
+      "period": "2024-Now",
+      "highlights": [
+        "Led production of a 400-page photography memoir documenting 40 years of world travel and touring for the acclaimed musician and DJ Larry Heard (Fingers Inc, Mr. Fingers), produced in partnership with Alleviated Records (US) and Clone Distribution (NL).",
+        "Directed digitization of over 10,000 physical assets, creative direction for book layout in Adobe InDesign and Illustrator, conducted and transcribed over 20 hours of interviews, and served as a coordinator for printing and lithography in the Netherlands. International print run of 2,500 copies scheduled for 2026."
+      ]
     }
-  ]
+  ],
+  "projects": [
+    {
+      "name": "Thrust",
+      "year": "2020-2025",
+      "description": "FM radio show on 91.7fm WYXR; music, interviews, and commentary"
+    },
+    {
+      "name": "Bad Advice For Travelers",
+      "year": "2024",
+      "description": "300-edition hardcover art book; self-published"
+    },
+    {
+      "name": "Morro, Asfalto, Mar",
+      "year": "2017",
+      "description": "Case study on the Rio 2016 Olympics, received Innovative Initiative Grant"
+    }
+  ],
+  "skills": {
+    "Data + Finance Analysis": ["Microsoft Excel (advanced)", "R", "matplotlib (Python)", "GA4", "Cision", "content strategy"],
+    "Design + Editing": ["Adobe Illustrator", "Adobe InDesign", "Adobe Premiere", "Adobe PhotoShop"],
+    "CMS + Website Management": ["Sharepoint", "Drupal", "HootSuite", "Sprout", "HeyOrca", "Microsoft Office", "Notion"],
+    "AV Production": ["Adobe Premiere", "Adobe Audition", "ProTools", "Sony camera opp", "live streaming/OBS"],
+    "Languages": ["English (native)", "French (professional)", "Spanish (intermediate)"]
+  }
 }
